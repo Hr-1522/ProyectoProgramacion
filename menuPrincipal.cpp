@@ -1,36 +1,69 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
-// Declaración de submenús (los que vayas usando)
+// DeclaraciÃ³n de submenus
+//void menuLista();
+//void menuCola();
+//void menuPila();
+//void menuArbol();
 void menuArbolBinario();
+//void menuArbolAVL();
+//void menuArbolB();
+//void menuHash();
 
 int main() {
     int opcion;
     do {
-        cout << "\n--- MENU PRINCIPAL ---\n";
-        cout << "1. Cola\n";
-        cout << "2. Pila\n";
-        cout << "3. Arbol Binario\n";
-        cout << "4. Arbol AVL\n";
-        cout << "5. Arbol B\n";
-        cout << "6. Arreglos\n";
-        cout << "7. Tablas Hash\n";
-        cout << "0. Salir\n";
-        cout << "Seleccione una opción: ";
+        cout << "\n=====================================\n";
+        cout << "        SISTEMA DE ESTRUCTURAS       \n";
+        cout << "=====================================\n";
+        cout << "| 1. Lista                          |\n";
+        cout << "| 2. Cola                           |\n";
+        cout << "| 3. Pila                           |\n";
+        cout << "| 4. Arbol                          |\n";
+        cout << "| 5. Arbol Binario                  |\n";
+        cout << "| 6. Arbol AVL                      |\n";
+        cout << "| 7. Arbol B                        |\n";
+        cout << "| 8. Tabla Hash                     |\n";
+        cout << "| 9. Salir                          |\n";
+        cout << "=====================================\n";
+        cout << "Seleccione una opcion: ";
         cin >> opcion;
 
-        switch (opcion) {
-            // case 1: menuCola(); break;
-            // case 2: menuPila(); break;
-        case 3: menuArbolBinario(); break;
-            // case 4: menuArbolAvl(); break;
-            // case 5: menuArbolB(); break;
-            // case 6: menuArreglo(); break;
-            // case 7: menuHash(); break;
-        case 0: cout << "Hasta luego...\n"; break;
-        default: cout << "Opción invalida.\n";
+
+        // Validacion de entrada
+        while (cin.fail() || opcion < 1 || opcion > 9) {
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout << "Opcion invalida. Ingrese un numero entre 0 y 8: ";
+            cin >> opcion;
         }
-    } while (opcion != 0);
+
+        system("cls");
+
+        switch (opcion) {
+            //case 1: menuLista(); break;
+           // case 2: menuCola(); break;
+           // case 3: menuPila(); break;
+           // case 4: menuArbol(); break;
+        case 5: menuArbolBinario(); break;
+            //case 6: menuArbolAVL(); break;
+           // case 7: menuArbolB(); break;
+           // case 8: menuHash(); break;
+        case 9:
+            char confirm;
+            cout << "Â¿Esta seguro que desea salir? (s/n): ";
+            cin >> confirm;
+            if (confirm == 's' || confirm == 'S') {
+                cout << "Hasta luego...\n";
+                return 0;
+            }
+            break;
+        default:
+            cout << "Opcion invalida. Intente de nuevo.\n";
+        }
+
+    } while (true);
 
     return 0;
 }
