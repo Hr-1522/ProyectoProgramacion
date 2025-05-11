@@ -8,7 +8,7 @@ using namespace std;
 //void menuArbol();
 void menuArbolBinario();
 //void menuArbolAVL();
-//void menuArbolB();
+void menuArbolB();
 //void menuHash();
 
 int main() {
@@ -48,7 +48,7 @@ int main() {
            // case 4: menuArbol(); break;
         case 5: menuArbolBinario(); break;
             //case 6: menuArbolAVL(); break;
-           // case 7: menuArbolB(); break;
+         case 7: menuArbolB(); break;
            // case 8: menuHash(); break;
         case 9:
             char confirm;
