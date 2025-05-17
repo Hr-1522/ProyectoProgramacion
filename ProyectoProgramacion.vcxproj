@@ -131,6 +131,7 @@
     <ClCompile Include="arbolB.cpp" />
     <ClCompile Include="arbolBinario.cpp" />
     <ClCompile Include="cola.cpp" />
+    <ClCompile Include="LISTA.cpp" />
     <ClCompile Include="menuPrincipal.cpp" />
     <ClCompile Include="pila.cpp" />
     <ClCompile Include="tablaHash.cpp" />
